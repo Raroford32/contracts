@@ -48,6 +48,9 @@ Create real-time monitors for:
 Trigger circuit breakers (e.g., pausing facets) when invariants are violated.
 
 ## Continuous Context, Memory, and Self-Evaluation
-- Record every assessment outcome in the existing `audit/auditLog.json` file: add a new `auditYYYYMMDD` entry under the top-level `audits` object (include `auditCompletedOn`, `auditedBy`, `auditorGitHandle`, `auditReportPath`, `auditCommitHash`, plus links to relevant contracts, commits, and test evidence) and update the contract mapping section as needed.
+- Record every assessment outcome in the existing `audit/auditLog.json` file:
+  - Add a new `auditYYYYMMDD` entry under the top-level `audits` object.
+  - Include `auditCompletedOn`, `auditedBy`, `auditorGitHandle`, `auditReportPath`, `auditCommitHash`, and links to relevant contracts, commits, and test evidence.
+  - Update the contract mapping section with the new audit ID where applicable.
 - Maintain an attack-surface map and invariant registry alongside the review notes so future audits inherit the latest context.
 - After every incident or release, run a post-review to update invariants, monitoring thresholds, and enumeration coverage.
