@@ -51,6 +51,6 @@ Trigger circuit breakers (e.g., pausing facets) when invariants are violated.
 - Record every assessment outcome in the existing `audit/auditLog.json` file:
   - Add a new `auditYYYYMMDD` entry under the top-level `audits` object.
   - Include `auditCompletedOn`, `auditedBy`, `auditorGitHandle`, `auditReportPath`, `auditCommitHash`, and links to relevant contracts, commits, and test evidence.
-  - Update the contract mapping section with the new audit ID where applicable.
+  - If the audit log lists contract names at the top level (below `audits`), append the new audit ID under the relevant contract/version entry.
 - Maintain an attack-surface map and invariant registry alongside the review notes so future audits inherit the latest context.
 - After every incident or release, run a post-review to update invariants, monitoring thresholds, and enumeration coverage.
